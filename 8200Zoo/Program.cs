@@ -16,7 +16,6 @@ class Program
         Zoo zoo = new Zoo();
         foreach(string typeName in animalTypes) {
             zoo.AddAnimal(typeName, typeName);
-            zoo.AddAnimal(typeName, typeName);
         }
         zoo.AddMeat(100);
         zoo.AddVeggie(100);
@@ -27,38 +26,38 @@ class Program
 
     static void Main(string[] args)
     {
-        // Zoo zoo = new Zoo();
-        // zoo.AddAnimal("Tiger","Tiger");
-        // zoo.AddAnimal("Tiger","Tiger2");
-        // zoo.AddAnimal("Lion","Arie");
-        // zoo.AddAnimal("Lion","Arie2");
-        // zoo.AddAnimal("Lion","Arie3");
-        // zoo.AddAnimal("Chicken","koko");
-        // zoo.AddAnimal("Chicken","koko2");
-        // zoo.AddAnimal("Chicken","koko3");
-        // zoo.AddAnimal("Parrot","Coco");
-        // zoo.AddAnimal("Parrot","Coco2");
-        // zoo.AddMeat(100);
-        // zoo.AddVeggie(100);
-        // string reaction = zoo.Feed();
-        // Console.WriteLine(reaction);
-        // zoo.MakeNuggets();
-        // reaction = zoo.Feed();
-        // Console.WriteLine("\n=====================\n");
-        // Console.WriteLine(reaction);
-        // zoo.AddAnimal("Chicken","koko");
-        // zoo.AddAnimal("Chicken","koko2");
-        // zoo.AddAnimal("Cow","moomoo");
-        // zoo.AddAnimal("Cow","moomoo2");
-        // zoo.Barbeque();
-        // reaction = zoo.Feed();
-        // Console.WriteLine("\n=====================\n");
-        // Console.WriteLine(reaction);
-        // zoo.KitCat();
-        // zoo.WakeCatUp('t');
-        // zoo.MakeCatSleep('2');
-        // zoo.KitCat();
-        checkAddAnimal();
+        Zoo zoo = new Zoo();
+        zoo.AddAnimal("Tiger","Tiger");
+        zoo.AddAnimal("Tiger","Tiger2");
+        zoo.AddAnimal("Lion","Arie");
+        zoo.AddAnimal("Lion","Arie2");
+        zoo.AddAnimal("Lion","Arie3");
+        zoo.AddAnimal("Chicken","koko");
+        zoo.AddAnimal("Chicken","koko2");
+        zoo.AddAnimal("Chicken","koko3");
+        zoo.AddAnimal("Parrot","Coco");
+        zoo.AddAnimal("Parrot","Coco2");
+        zoo.AddMeat(100);
+        zoo.AddVeggie(100);
+        string reaction = zoo.Feed();
+        Console.WriteLine(reaction);
+        zoo.MakeNuggets();
+        reaction = zoo.Feed();
+        Console.WriteLine("\n=====================\n");
+        Console.WriteLine(reaction);
+        zoo.AddAnimal("Chicken","koko");
+        zoo.AddAnimal("Chicken","koko2");
+        zoo.AddAnimal("Cow","moomoo");
+        zoo.AddAnimal("Cow","moomoo2");
+        zoo.Barbeque();
+        reaction = zoo.Feed();
+        Console.WriteLine("\n=====================\n");
+        Console.WriteLine(reaction);
+        zoo.KitCat();
+        zoo.WakeCatUp('t');
+        zoo.MakeCatSleep('2');
+        zoo.KitCat();
+
     }
 
 

@@ -1,5 +1,6 @@
 using System.Reflection;
 using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace _8200Zoo;
 
@@ -16,7 +17,7 @@ public class Zoo{
     private List<Poultry> Poultries = new List<Poultry>();
     public void AddAnimal(string typeName, string name){   
         if(typeName == null || name == null){
-            throw new InvalidTypeException();
+            throw new ArgumentException();
         }
         
         //typeName should be in this format: namespace.class
@@ -117,12 +118,13 @@ public class Zoo{
         foreach(Cat cat in awake_cats){
             meatToRemove += cat.FoodConsumption;
         }
-        if(MeatAmount >= meatToRemove){
-            MeatAmount -= meatToRemove;
-            foreach(Cat cat in awake_cats){
-                cat.Weight += 0.2 * cat.Weight;
-            }
-        }        
+        if(meatToRemove > MeatAmount){
+            throw new NotEnoughMeatException();
+        }
+        MeatAmount -= meatToRemove;
+        foreach(Cat cat in awake_cats){
+            cat.Weight += 0.2 * cat.Weight;
+        }       
     }
     public int MakeNuggets(){
         int total_wings = 0;
