@@ -122,7 +122,7 @@ namespace _8200Zoo
         [Fact]
         public void Milk()
         {
-            //check if all the predators are predators
+            //check if the milk functionality works 
             Assert.Equal(0, _mammals.Count(mammal => mammal.GotMilk));
 
             foreach (var mammal in _mammals)
@@ -136,14 +136,14 @@ namespace _8200Zoo
         [Fact]
         public void Weight()
         {
-            //check if all the predators are predators
+            //check if all the weight is correct
             Assert.Equal(737, _animals.Sum(animal => animal.Weight));
         }
 
         [Fact]
         public void Food()
         {
-            //check if all the predators are predators
+            //check if all the food ammount are correct
             Assert.Equal(41, _animals.Sum(animal => animal.FoodConsumption));
         }
 
